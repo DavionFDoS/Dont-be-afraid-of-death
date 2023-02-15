@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
-    public float speed = 10.0f;
-    public float jumpForce = 10.0f;
-    public float groundCheckRadius = 0.2f;
-    public LayerMask groundLayer;
+    public float Speed = 10.0f;
+    public float JumpForce = 10.0f;
+    public float GroundCheckRadius = 0.2f;
+    public LayerMask GroundLayer;
+    public GameObject[] GroundCheckers;
 
     private Rigidbody2D rb;
     private bool isGrounded;
-    private const string HORIZONTAL_AXIS = "Horizontal";
-    private const string JUMP_BUTTON = "Jump";
+    private const string HorizontalAxis = "Horizontal";
 
     private void Start()
     {
@@ -19,16 +19,17 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(transform.position, groundCheckRadius, groundLayer);
+        isGrounded = Physics2D.OverlapCircle(GroundCheckers[0].transform.position, GroundCheckRadius, GroundLayer) ||
+            Physics2D.OverlapCircle(GroundCheckers[1].transform.position, GroundCheckRadius, GroundLayer);
 
-        float horizontalInput = Input.GetAxis(HORIZONTAL_AXIS);
+        float horizontalInput = Input.GetAxis(HorizontalAxis);
         Vector2 velocity = rb.velocity;
-        velocity.x = horizontalInput * speed;
+        velocity.x = horizontalInput * Speed;
         rb.velocity = velocity;
 
-        if (Input.GetButtonDown(JUMP_BUTTON) && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(0, JumpForce), ForceMode2D.Impulse);
         }
     }
 }
