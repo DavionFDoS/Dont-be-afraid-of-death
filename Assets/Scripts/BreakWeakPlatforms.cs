@@ -6,7 +6,7 @@ public class BreakWeakPlatforms : MonoBehaviour
 {
     private const string Breakable = "Breakable";
     private int _breakable;
-    void Start()
+    private void Start()
     {
         _breakable = LayerMask.NameToLayer(Breakable);
     }

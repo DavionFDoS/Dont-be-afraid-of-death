@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ReloadLevel : MonoBehaviour
 {
     public string SceneToReload;
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
