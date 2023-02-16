@@ -18,6 +18,7 @@ public class CharactersHandler : MonoBehaviour
     [SerializeField]
     private int _deathAllowed = 5;
     private ParticleSystem _deathParticle;
+    private float _fireballSpeed = 5;
 
     private void Start()
     {
@@ -31,7 +32,20 @@ public class CharactersHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K) && _deathAllowed > 0)
         {
-            Instantiate(CharactersBodies[_currentCharacterIndex], _currentCharacter.transform.position, Quaternion.identity);
+            GameObject body = Instantiate(CharactersBodies[_currentCharacterIndex], _currentCharacter.transform.position, Quaternion.identity);
+            Rigidbody2D bodyRb = body.GetComponent<Rigidbody2D>();
+            ParticleSystem bodyParticalSystem = body.GetComponent<ParticleSystem>();
+
+            if (bodyParticalSystem)
+            {
+                bodyParticalSystem.Play();
+            }
+
+            if (bodyRb.isKinematic)
+            {
+                bodyRb.velocity = Vector2.right * _fireballSpeed;
+            }
+
             ParticleSystem deathParticle = Instantiate(_deathParticle, _currentCharacter.transform.position, Quaternion.identity);
             deathParticle.Play();
             _audioSource.PlayOneShot(DeathSound);
