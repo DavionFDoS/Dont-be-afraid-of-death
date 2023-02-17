@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844406679238759624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.3078084, y: 0.11299175, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -102,15 +102,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658f4fe88c6239f499361b1c058e1147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 6
-  GroundCheckRadius: 0.2
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 64
   GroundCheckers:
   - {fileID: 9168100992862207106}
   - {fileID: 8824496458476899091}
+  GroundCheckRadius: 0.1
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  JumpForce: 6
+  Speed: 6
 --- !u!61 &1544791447429391465
 BoxCollider2D:
   m_ObjectHideFlags: 0

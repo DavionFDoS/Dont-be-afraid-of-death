@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class ReloadLevel : MonoBehaviour
 {
-    public string SceneToReload;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            if (!string.IsNullOrEmpty(SceneToReload))
-            {
-                SceneManager.LoadScene(SceneToReload);
-            }            
+            ReloadCurrentScene();
         }
+       
+    }
+    public void ReloadCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

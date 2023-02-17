@@ -6,6 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainMenu.unity
+    guid: a43f8834009f2a443bfe095719982e9e
+  - enabled: 1
+    path: Assets/Scenes/JailOfWhite.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level01.unity
+    guid: 19a16aea4500150419a5e6586ed9638d
+  - enabled: 1
+    path: Assets/Scenes/Level02.unity
+    guid: 1cff46afe74276e44a8376b61dd590c3
+  - enabled: 1
+    path: Assets/Scenes/Level03.unity
+    guid: 628c350512b9f484bbbc5f63656bf8ef
   m_configObjects: {}

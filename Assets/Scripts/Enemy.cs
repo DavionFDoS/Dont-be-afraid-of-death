@@ -14,5 +14,6 @@ public class Enemy : MonoBehaviour
         ParticleSystem deathParticles = Instantiate(_deathParticles, transform.position, Quaternion.identity);
         deathParticles.Play();
         Destroy(gameObject);
+        Destroy(deathParticles);
     }
 }

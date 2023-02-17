@@ -103,8 +103,11 @@ public class CharactersHandler : MonoBehaviour
             return;
         }
 
+        Vector3 velocity = _currentCharacter.GetComponent<Rigidbody2D>().velocity;
+
         Destroy(_currentCharacter);
         _currentCharacterIndex = characterIndex;
         _currentCharacter = Instantiate(Characters[_currentCharacterIndex], _currentCharacter.transform.position, _currentCharacter.transform.rotation);
+        _currentCharacter.GetComponent<Rigidbody2D>().velocity= velocity;
     }
 }

@@ -91,14 +91,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4761347323810671937}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1898468, y: 0.77730906, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4451071658044167260}
   - {fileID: 2155506429590261855}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4761347323810671938
 MonoBehaviour:
@@ -112,15 +112,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 658f4fe88c6239f499361b1c058e1147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
-  JumpForce: 6
-  GroundCheckRadius: 0.2
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 64
   GroundCheckers:
   - {fileID: 4451071658044167263}
   - {fileID: 4664440745150392929}
+  GroundCheckRadius: 0.1
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  JumpForce: 6
+  Speed: 6
 --- !u!50 &4761347323810671940
 Rigidbody2D:
   serializedVersion: 4

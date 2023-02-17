@@ -10,7 +10,6 @@ public class CharacterController2D : MonoBehaviour
 
     private Rigidbody2D _rb;
     private bool _isGrounded;
-
     private const string HorizontalAxis = "Horizontal";
 
     private void Start()

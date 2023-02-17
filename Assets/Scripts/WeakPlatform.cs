@@ -17,5 +17,7 @@ public class WeakPlatform : MonoBehaviour
         {
             weakPlatformDestroyed.Play();
         }
+
+        Destroy(weakPlatformDestroyed.gameObject);
     }
 }
