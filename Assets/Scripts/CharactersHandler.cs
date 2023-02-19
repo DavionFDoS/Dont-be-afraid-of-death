@@ -18,14 +18,14 @@ public class CharactersHandler : MonoBehaviour
     [SerializeField]
     private int _deathAllowed = 5;
     private ParticleSystem _deathParticle;
-    private float _fireballSpeed = 5;
+    private float _fireballSpeed = 6;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
         _currentCharacter = Instantiate(Characters[0], RespawnPoint.transform.position, Quaternion.identity);
         DeathAllowedText.text = _deathAllowed.ToString();
-        _deathParticle = FindObjectOfType<ParticleSystem>();
+        _deathParticle = gameObject.GetComponentInChildren<ParticleSystem>();
     }
 
     private void Update()
@@ -34,11 +34,11 @@ public class CharactersHandler : MonoBehaviour
         {
             GameObject body = Instantiate(CharactersBodies[_currentCharacterIndex], _currentCharacter.transform.position, Quaternion.identity);
             Rigidbody2D bodyRb = body.GetComponent<Rigidbody2D>();
-            ParticleSystem bodyParticalSystem = body.GetComponent<ParticleSystem>();
+            ParticleSystem bodyParticleSystem = body.GetComponent<ParticleSystem>();
 
-            if (bodyParticalSystem)
+            if (bodyParticleSystem)
             {
-                bodyParticalSystem.Play();
+                bodyParticleSystem.Play();
             }
 
             if (bodyRb.isKinematic)
@@ -57,6 +57,11 @@ public class CharactersHandler : MonoBehaviour
             DeathAllowedText.text = _deathAllowed.ToString();
 
             _currentCharacter = Instantiate(Characters[_currentCharacterIndex], RespawnPoint.position, Quaternion.identity);
+
+            if (!deathParticle.isPlaying)
+            {
+                Destroy(deathParticle);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))

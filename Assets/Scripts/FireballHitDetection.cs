@@ -6,10 +6,10 @@ public class FireballHitDetection : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-        if (enemy)
+        DestroyObstacle obstacle = collision.gameObject.GetComponent<DestroyObstacle>();
+        if (obstacle)
         {
-            enemy.OnHit();
+            obstacle.OnHit();            
         }
 
         if (collision.gameObject.GetComponent<CharacterController2D>())

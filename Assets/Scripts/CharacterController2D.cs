@@ -4,7 +4,7 @@ public class CharacterController2D : MonoBehaviour
 {
     public GameObject[] GroundCheckers;
     public float GroundCheckRadius = 0.2f;
-    public LayerMask GroundLayer;
+    public LayerMask[] GroundLayers;
     public float JumpForce = 10.0f;
     public float Speed = 10.0f;
 
@@ -19,8 +19,10 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update()
     {
-        _isGrounded = Physics2D.OverlapCircle(GroundCheckers[0].transform.position, GroundCheckRadius, GroundLayer) ||
-            Physics2D.OverlapCircle(GroundCheckers[1].transform.position, GroundCheckRadius, GroundLayer);
+        _isGrounded = Physics2D.OverlapCircle(GroundCheckers[0].transform.position, GroundCheckRadius, GroundLayers[0]) ||
+            Physics2D.OverlapCircle(GroundCheckers[1].transform.position, GroundCheckRadius, GroundLayers[0]) ||
+            Physics2D.OverlapCircle(GroundCheckers[0].transform.position, GroundCheckRadius, GroundLayers[1]) ||
+            Physics2D.OverlapCircle(GroundCheckers[1].transform.position, GroundCheckRadius, GroundLayers[1]);
 
         float horizontalInput = Input.GetAxis(HorizontalAxis); 
 

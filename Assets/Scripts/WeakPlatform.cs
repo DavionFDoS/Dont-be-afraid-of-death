@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class WeakPlatform : MonoBehaviour
 {
-    private ParticleSystem _weakPlatformDestroyed;
+    private AudioSource _audioSource;
     private void Awake()
     {
-        _weakPlatformDestroyed = GetComponentInChildren<ParticleSystem>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
     }
-    private void OnDestroy()
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        ParticleSystem weakPlatformDestroyed = Instantiate(_weakPlatformDestroyed, transform.position, Quaternion.identity);
-
-        if (weakPlatformDestroyed)
+        if (collision.gameObject.GetComponent<CharacterController2D>())
         {
-            weakPlatformDestroyed.Play();
+            _audioSource.UnPause();
+            _audioSource.Play();
         }
+    }
 
-        Destroy(weakPlatformDestroyed.gameObject);
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<CharacterController2D>())
+        {
+            _audioSource.Pause();
+        }
     }
 }

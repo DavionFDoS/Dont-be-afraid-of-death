@@ -168,9 +168,11 @@ MonoBehaviour:
   - {fileID: 1431026008740164738}
   - {fileID: 5135590664257454064}
   GroundCheckRadius: 0.1
-  GroundLayer:
-    serializedVersion: 2
+  GroundLayers:
+  - serializedVersion: 2
     m_Bits: 64
+  - serializedVersion: 2
+    m_Bits: 128
   JumpForce: 6
   Speed: 6
 --- !u!96 &2339228249870925696

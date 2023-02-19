@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 31559
+  controlID: 47
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 31560
+  controlID: 48
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 31561
+  controlID: 49
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -343,7 +343,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -407,9 +407,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f4affcff22d1fcff9ed4fcff4af6fcff52f9fcfffe34fdff3e69fdffb669fdff346afdff7e70fdff5676fdff587bfdff60b8fdffaeb9fdff52bbfdfffcbdfdff2cc0fdff5cc1fdffeac2fdff98c4fdffe0cdfdff3ecefdffbccefdff34cffdff54d1fdffd417feffde17feff2296feff6296feffeedcfeff740bffff72abffffb4c3fffffec3ffff44c4ffffe2f9ffff28fbffff6a600000e8800000aac4000076d00000ecdc000072f2000050f3000038110100ce480100
+      m_SelectedIDs: 008c0000
+      m_LastClickedID: 35840
+      m_ExpandedIDs: 88acffffe4e4ffff02e6ffff90e6ffff2ce9ffff58eaffff6cebffff14ecffffacecffff1aeeffff2aefffffdaf1ffffd8f3ffffb2f4ffff56f5ffff66f6ffff8ef7ffff20fbffffb07f00001a810000e4820000a883000082840000e084000054850000d685000046860000c28b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -724,9 +724,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.1344233, y: -2.7465286, z: -0.15066111}
+    m_Target: {x: 4.717309, y: -0.29209936, z: -4.326772}
     speed: 2
-    m_Value: {x: -1.1344233, y: -2.7465286, z: -0.15066111}
+    m_Value: {x: 4.717309, y: -0.29209936, z: -4.326772}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -776,9 +776,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.080318
+    m_Target: 7.732687
     speed: 2
-    m_Value: 8.080318
+    m_Value: 7.732687
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -872,22 +872,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefubs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefubs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Games\Don't be afraid of death!
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 22600000
-    m_LastClickedID: 24610
-    m_ExpandedIDs: 00000000066000002660000000ca9a3b
+    m_SelectedIDs: 80600000
+    m_LastClickedID: 24704
+    m_ExpandedIDs: 000000005c60000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -915,7 +915,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000660000000ca9a3b
+    m_ExpandedIDs: 000000005c600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -943,21 +943,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000e465000008810000
+    m_ExpandedInstanceIDs: c6230000e46500000881000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Level03
-      m_OriginalName: Level03
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 77356
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
@@ -1034,7 +1034,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 513
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
