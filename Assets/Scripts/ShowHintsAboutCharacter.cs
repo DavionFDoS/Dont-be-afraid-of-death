@@ -44,7 +44,6 @@ public class ShowHintsAboutCharacter : MonoBehaviour
         GameObject characterBody = Instantiate(CharacterBody, characterPosition, Quaternion.identity);
 
         ParticleSystem bodyParticleSystem = characterBody.GetComponent<ParticleSystem>();
-        print(bodyParticleSystem);
 
         if (bodyParticleSystem)
         {

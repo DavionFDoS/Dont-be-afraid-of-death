@@ -23,7 +23,7 @@ public class CharactersHandler : MonoBehaviour
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
-        _deathParticle = gameObject.GetComponentInChildren<ParticleSystem>();
+        _deathParticle = GetComponentInChildren<ParticleSystem>();
     }
 
     private void Start()

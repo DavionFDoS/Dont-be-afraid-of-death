@@ -7,7 +7,7 @@ public class WeakPlatform : MonoBehaviour
     private AudioSource _audioSource;
     private void Awake()
     {
-        _audioSource = gameObject.GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
