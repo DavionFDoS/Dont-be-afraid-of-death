@@ -20,12 +20,16 @@ public class CharactersHandler : MonoBehaviour
     private ParticleSystem _deathParticle;
     private float _fireballSpeed = 6;
 
-    private void Start()
+    private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
+        _deathParticle = gameObject.GetComponentInChildren<ParticleSystem>();
+    }
+
+    private void Start()
+    {
         _currentCharacter = Instantiate(Characters[0], RespawnPoint.transform.position, Quaternion.identity);
         DeathAllowedText.text = _deathAllowed.ToString();
-        _deathParticle = gameObject.GetComponentInChildren<ParticleSystem>();
     }
 
     private void Update()
